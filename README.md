@@ -4,7 +4,6 @@ Le code est ~~pas encore fini, mais presque. Je vais continuer de le mettre à j
 
 -------------------------------------------------
 **PAS DE CTRL+C CTRL+V**  
-(ok peut-être un peu, juste un peu)  
 
 -------------------------------------------------
 

@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+/Graphicus-03/debug
+/Graphicus-03/release
+/Graphicus-03/.vs

@@ -114,7 +114,7 @@ bool MonInterface::ouvrirFichier(const char* fichier)
 		for (int i = 0; i < (coucheActiveID - 1); i++) { // move to the active layer
 			coucheSuivante();
 		}
-
+		
 		int tempNbCouches = etatcouche.size();
 		for (int i = 0; i < tempNbCouches; i++) // set layers to their proper state
 		{

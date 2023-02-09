@@ -11,13 +11,13 @@
 Carre::Carre() : Rectangle() {
 	cote = 1;
 }
-Carre::Carre(int x1, int y1) : Rectangle(1, 1, x1, y1) {
+Carre::Carre(int x1, int y1) : Rectangle(x1, y1, 1, 1) {
 	cote = 1;
 }
-Carre::Carre(int x1, int y1, int size) : Rectangle(size, size, x1, y1) {
+Carre::Carre(int x1, int y1, int size) : Rectangle(x1, y1, size, size) {
     cote = size;
 }
-Carre::Carre(int size) : Rectangle() {
+Carre::Carre(int size) : Rectangle(0, 0, size, size) {
     cote = size;
 }
 Carre::~Carre() {

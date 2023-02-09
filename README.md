@@ -2,7 +2,7 @@
 Concepts avancés en programmation orientée objets  
 
 -------------------------------------------------
-PAS DE CTRL+C CTRL+V  
+**PAS DE CTRL+C CTRL+V**  
 (ok peut-être un peu, juste un peu)  
 
 -------------------------------------------------

@@ -1,6 +1,7 @@
 /********
  * Fichier: canevas.cpp
- * Auteurs: Philippe Durette, Roxanne Cote
+ * Auteurs: Philippe Durette, Youlian Houehounou
+ *		base sur canevas.cpp par: Philippe Durette, Roxanne Cote
  * Date: 10 janvier 2023 (creation)
  * Description: Declaration de la classe Canevas. La classe gere un
  * tableau de couches en accord avec les specifications de Graphicus.

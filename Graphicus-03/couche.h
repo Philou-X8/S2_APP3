@@ -1,6 +1,7 @@
 /********
  * Fichier: couche.h
- * Auteurs: Philippe Durette, Roxanne C�t�
+ * Auteurs: Philippe Durette, Youlian Houehounou
+ *		base sur couche.h par: Philippe Durette, Roxanne Cote
  * Date: 10 janvier 2023 (creation)
  * Description:Implementation des methodes des classes decrites dans
  * Couche.cpp. 

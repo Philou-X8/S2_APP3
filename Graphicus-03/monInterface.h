@@ -8,6 +8,12 @@
 *                Université de Sherbrooke  
 ********/
 
+/********
+ * Fichier: monInterface.h
+ * modifie par: Philippe Durette, Youlian Houehounou
+ * Date: 6 fevrier 2023 (modification)
+********/
+
 #ifndef MONINTERFACE_H
 #define MONINTERFACE_H
 

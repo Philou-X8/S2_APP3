@@ -1,6 +1,7 @@
 /********
  * Fichier: Cercle.h
- * Auteurs: Roxanne Cote et Philippe Durette
+ * Auteurs: Philippe Durette, Youlian Houehounou
+ *		base sur Cercle.h par: Philippe Durette, Roxanne Cote
  * Date: 10 janvier 2023 (creation)
  * Description: Declaration des classes de formes Cercle
  *    Ce fichier fait partie de la distribution de Graphicus.

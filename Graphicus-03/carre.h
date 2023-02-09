@@ -1,7 +1,8 @@
 /********
  * Fichier: carre.h
- * Auteurs: Roxanne Cote et Philippe Durette
- *  Date: 10 janvier 2023 (creation)
+ * Auteurs: Philippe Durette, Youlian Houehounou
+ *		base sur carre.h par: Philippe Durette, Roxanne Cote
+ * Date: 10 janvier 2023 (creation)
  * Description: Declaration des classes de formes Carre
  *    Ce fichier fait partie de la distribution de Graphicus.
 ********/

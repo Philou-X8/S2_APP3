@@ -2,10 +2,16 @@
 * Fichier: monInterface.cpp
 * Auteurs: C.-A. Brunet
 * Date: 21 décembre 2021 (création)
-* Description: Voir fichier d'entête pour informations.
+* Description: La classe MonInterface teste l'interface usager GraphicusGUI.
 *
 * Copyright 2022 Département de génie électrique et génie informatique
-*                Université de Sherbrooke  
+*                Université de Sherbrooke
+********/
+
+/********
+ * Fichier: monInterface.cpp
+ * modifie par: Philippe Durette, Youlian Houehounou
+ * Date: 6 fevrier 2023 (modification)
 ********/
 
 #include <random>

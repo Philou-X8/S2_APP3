@@ -1,6 +1,7 @@
 /********
  * Fichier: vecteur.h
- * Auteurs: Roxanne Cote et Philippe Durette
+ * Auteurs: Philippe Durette, Youlian Houehounou
+ *		base sur vecteur.h par: Philippe Durette, Roxanne Cote
  * Date: 10 janvier 2023 (creation)
  * Description: eclaration de la classe Vecteur. La classe gere un
  *    tableau de figure en accord avec les specifications de Graphicus.
@@ -87,7 +88,6 @@ public:
 	}
 	bool add(T addedItem) 
 	{
-		//if (addedItem == nullptr) return false;
 		if (nbObject == maxSize) { // vector is full
 			resizeUp();
 		}
@@ -108,44 +108,19 @@ public:
 	}
 	T removeItem(int index) 
 	{
-		/* Obsolete: pointer management 
-		if (index < 0 || index >= nbObject)
-		{
-			return nullptr;
-		} 
-		*/
 		T removedItem = arr[index];
 		if (nbObject > 0) nbObject--;
 		if (index < nbObject) { //if the cell is not the last
 			collapseCell(index);
 		}
-		/* Obsolete: pointer management 
-		else {
-			arr[index] = nullptr;
-		}
-		*/
+		
 		if (index > 0) activeIndex = index - 1;
 		return removedItem;
 	}
 	T getItem(int index) 
 	{
-		/* Obsolete: pointer management
-		if (index < 0 || index >= nbObject)
-		{
-			return nullptr;
-		}
-		*/
 		return arr[index];
 	}
-	/*
-	void afficher(ostream& s) 
-	{
-		for (int i(0); i < nbObject; i++) {
-		
-			s << arr[i];
-		}
-	}
-	*/
 private:
 
 	void resizeUp() 

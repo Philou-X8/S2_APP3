@@ -25,6 +25,7 @@ public:
 	MonInterface(const char *theName = nullptr);
 	virtual void reinitialiserCanevas();
 
+	bool ouvrirFichier(const char* fichier);
 	bool sauvegarderFichier(const char* c_fileName);
 	
 	virtual void coucheTranslater(int deltaX, int deltaY);
@@ -47,6 +48,8 @@ public:
 	void formePrecedente();
 	void formeSuivante();
 	void formeDerniere();
+
+	void modePileChange(bool mode);
 
 private:
 	void updateUI();

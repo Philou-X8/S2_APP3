@@ -59,7 +59,7 @@ bool Couche::ReinitialiserCouche()
 }
 bool Couche::ChangerEtat(int etat)
 {   
-    if(etat <= 4  && etat > 0)
+    if(etat >= 0 && etat <= 4)
     {
         Etat = etat;
         return true;
@@ -130,7 +130,7 @@ void Couche::updateInfo(Informations& info, bool activeLayer) {
             info.formeActive = -1;
         }
         else {
-            cout << "\n---layer is active--- " << vecteur.getSize() << "\n";
+            //cout << "\n---layer is active--- " << vecteur.getSize() << "\n";
             info.nbFormesCouche = vecteur.getSize();
             info.formeActive = vecteur.getActiveIndex();
             info.coordX = vecteur[vecteur.getActiveIndex()]->getAncrage().x;

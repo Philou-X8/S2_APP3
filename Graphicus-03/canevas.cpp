@@ -15,7 +15,7 @@ Canevas::Canevas()
 	couches.setActiveIndex(0);
 	coucheMemoire = 0;
 	changerEtatCouche(ACTIVE);
-	
+	inversionPile = false;
 }
 
 Canevas::~Canevas()
@@ -143,6 +143,10 @@ void Canevas::afficher(ostream &s)
 }
 */
 
+void Canevas::inversePile(bool mode) {
+	inversionPile = mode;
+}
+
 void Canevas::updateInfo(Informations& info) {
 	info.nbCouches = couches.getSize();
 	info.nbFormesCanevas = 0;
@@ -150,8 +154,8 @@ void Canevas::updateInfo(Informations& info) {
 	info.nbFormesCouche = 0;
 	
 	for (int i = 0; i < couches.getSize(); i++) {
-		cout << "Active Laver: [ " << couches.getActiveIndex() << " ] , Value of i: [ " << i << " ]\n";
-		cout << "i == couches.getActiveIndex(): [ " << (i == couches.getActiveIndex()) << " ]\n";
+		//cout << "Active Laver: [ " << couches.getActiveIndex() << " ] , Value of i: [ " << i << " ]\n";
+		//cout << "i == couches.getActiveIndex(): [ " << (i == couches.getActiveIndex()) << " ]\n";
 		couches[i].updateInfo(info, (i == couches.getActiveIndex()));
 	}
 	info.aireCanevas = aire();

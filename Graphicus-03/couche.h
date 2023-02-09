@@ -37,10 +37,10 @@ public:
    double AireTotaleCouche();
    bool Translater(int h, int v);
    bool ReinitialiserCouche();
-   bool ChangerEtat(int ChoixEtat);/////////A FAIRE
+   bool ChangerEtat(int ChoixEtat);
    int getEtat();
    void changerFormeActive(int deplacement);
-   void AfficherCouche(ostream & s);
+   //void AfficherCouche(ostream & s); // Obsolete: use the << operator instead
 	
    void updateInfo(Informations& info, bool activeLayer);
 

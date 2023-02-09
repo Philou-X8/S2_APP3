@@ -89,7 +89,6 @@ public:
 	{
 		//if (addedItem == nullptr) return false;
 		if (nbObject == maxSize) { // vector is full
-			cout << "\n--- resizeUp() dans Vecteur ---\n";
 			resizeUp();
 		}
 		arr[nbObject] = addedItem;
@@ -100,6 +99,7 @@ public:
 	void clear()
 	{
 		nbObject = 0;
+		activeIndex = 0;
 		resizeDown();
 	}
 	bool isEmpty() 
@@ -115,7 +115,7 @@ public:
 		} 
 		*/
 		T removedItem = arr[index];
-		nbObject--;
+		if (nbObject > 0) nbObject--;
 		if (index < nbObject) { //if the cell is not the last
 			collapseCell(index);
 		}

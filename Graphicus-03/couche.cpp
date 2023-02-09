@@ -59,7 +59,7 @@ bool Couche::ReinitialiserCouche()
 }
 bool Couche::ChangerEtat(int etat)
 {   
-    if(etat <= 4  && etat > 1)
+    if(etat <= 4  && etat > 0)
     {
         Etat = etat;
         return true;
@@ -97,6 +97,7 @@ void Couche::changerFormeActive(int deplacement) {
     }
 
 }
+/* Obsolete: use the << operator instead
 void Couche::AfficherCouche(ostream& s)
 {
     if ((Etat == 1) || vecteur.isEmpty())
@@ -106,10 +107,10 @@ void Couche::AfficherCouche(ostream& s)
     else
         s << vecteur;
 }
-
+*/
 void Couche::updateInfo(Informations& info, bool activeLayer) {
-    info.nbFormesCouche += vecteur.getSize();
-    if (activeLayer) {
+    info.nbFormesCanevas += vecteur.getSize();
+    if (activeLayer) { // if the layer is the active layer
         switch (Etat) {
         case INITIALISER:
             info.etatCouche[0] = 'i';
@@ -125,12 +126,17 @@ void Couche::updateInfo(Informations& info, bool activeLayer) {
             break;
         }
         info.aireCouche = AireTotaleCouche();
-        if (vecteur.getSize() == 0) info.formeActive = -1;
+        if (vecteur.getSize() == 0) { // if the layer doesn't have any shape
+            info.formeActive = -1;
+        }
         else {
+            cout << "\n---layer is active--- " << vecteur.getSize() << "\n";
+            info.nbFormesCouche = vecteur.getSize();
             info.formeActive = vecteur.getActiveIndex();
             info.coordX = vecteur[vecteur.getActiveIndex()]->getAncrage().x;
             info.coordY = vecteur[vecteur.getActiveIndex()]->getAncrage().y;
             info.aireForme = vecteur[vecteur.getActiveIndex()]->aire();
+            info.informationForme[0] = '\0';
         }
     }
 }

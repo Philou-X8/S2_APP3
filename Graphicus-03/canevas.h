@@ -41,7 +41,7 @@ public:
 
 	double aire();
 	bool translater(int deltaX, int deltaY);
-	void afficher(ostream &s);
+	//void afficher(ostream &s); // Obsolete: use the << operator instead
 
 	void updateInfo(Informations& info);
 

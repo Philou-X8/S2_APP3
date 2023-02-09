@@ -28,6 +28,7 @@ MonInterface::MonInterface(const char* theName) : GraphicusGUI(theName)
 void MonInterface::reinitialiserCanevas()
 {
 	canevas.reinitialiser();
+	clearInformations();
 	updateUI();
 }
 
@@ -114,12 +115,17 @@ void MonInterface::formeDerniere() {
 }
 
 void MonInterface::updateUI() {
-
-	canevas.updateInfo(info); // update the info struct
-	setInformations(info); /// send the info struct to the UI
+	
+	// send shapes to UI
 	stringstream ss;
 	ss << canevas; // convert canvas to text
 	dessiner(ss.str().c_str()); // send text to UI
-	//cout << canevas;
 
+	// send shapes to the info bar
+	clearInformations();
+	canevas.updateInfo(info); // update the info struct
+	setInformations(info); /// send the info struct to the UI
+
+	
+	//cout << canevas << endl; // for debugging
 }

@@ -59,13 +59,13 @@ void Canevas::changerCouche(int deplacement) {
 	default:
 		break;
 	}
-	cout << "- changerCouche: couches.getActiveIndex() ===== " << couches.getActiveIndex() << " " << coucheMemoire << endl;
+	//cout << "- changerCouche: couches.getActiveIndex() ===== " << couches.getActiveIndex() << " " << coucheMemoire << endl;
 	if (couches[coucheMemoire].getEtat() != CACHE) { // si la couche n'est pas à l'état cache
 		couches[coucheMemoire].ChangerEtat(INACTIVE); // desactive la vieille couche 
 	}
 	couches[couches.getActiveIndex()].ChangerEtat(ACTIVE); // active la nouvelle couche
 	coucheMemoire = couches.getActiveIndex();
-	cout << "\n--- couche dans Canevas ---\n";
+	//cout << "\n--- couche dans Canevas ---\n";
 }
 
 void Canevas::changerEtatCouche(int etat){
@@ -74,7 +74,7 @@ void Canevas::changerEtatCouche(int etat){
 }
 
 void Canevas::coucheAjouter() {
-	cout << "\n--- coucheAjouter() dans Canevas ---\n";
+	//cout << "\n--- coucheAjouter() dans Canevas ---\n";
 	if (couches[couches.getActiveIndex()].getEtat() != CACHE) { // si la couche n'est pas à l'état cache
 		couches[couches.getActiveIndex()].ChangerEtat(INACTIVE); // desactive la vieille couche 
 	}
@@ -86,9 +86,13 @@ void Canevas::coucheRetirer() {
 		couches[couches.getActiveIndex()].ReinitialiserCouche();
 		couches.removeItem(couches.getActiveIndex());
 	}
+	if (couches.getSize() == 0) {
+		reinitialiser();
+	}
+	changerCouche(PRECEDANTE);
 }
 void Canevas::coucheCacher() {
-	cout << "---------- call: couche cache -\n";
+	//cout << "---------- call: couche cache -\n";
 	if (couches[couches.getActiveIndex()].getEtat() == CACHE) {
 		//cout << "- couche était cache -\n";
 		couches[couches.getActiveIndex()].ChangerEtat(ACTIVE);
@@ -128,7 +132,7 @@ bool Canevas::translater(int deltaX, int deltaY)
 {
 	return couches[couches.getActiveIndex()].Translater(deltaX, deltaY);
 }
-
+/* Obsolete: use the << operator instead
 void Canevas::afficher(ostream &s)
 {
 	for (int x =0; x<5; x++)
@@ -137,12 +141,18 @@ void Canevas::afficher(ostream &s)
 	  couches[x].AfficherCouche(s);
 	}
 }
+*/
 
 void Canevas::updateInfo(Informations& info) {
 	info.nbCouches = couches.getSize();
 	info.nbFormesCanevas = 0;
+	info.coucheActive = couches.getActiveIndex();
+	info.nbFormesCouche = 0;
+	
 	for (int i = 0; i < couches.getSize(); i++) {
-		couches[i].updateInfo(info, i == couches.getActiveIndex());
+		cout << "Active Laver: [ " << couches.getActiveIndex() << " ] , Value of i: [ " << i << " ]\n";
+		cout << "i == couches.getActiveIndex(): [ " << (i == couches.getActiveIndex()) << " ]\n";
+		couches[i].updateInfo(info, (i == couches.getActiveIndex()));
 	}
 	info.aireCanevas = aire();
 }

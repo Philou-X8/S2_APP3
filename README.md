@@ -3,7 +3,8 @@ Concepts avancés en programmation orientée objets
 Le code est ~~pas encore fini, mais presque. Je vais continuer de le mettre à jour quand y'avance.~~ pas mal fini. "Tout" devrais fonctionner, à moins qu'il y aye des bug que j'ai pas trouvées.
 
 -------------------------------------------------
-**PAS DE CTRL+C CTRL+V**  
+**PAS  DE  CTRL+C  CTRL+V**  
+Si ça cause des problèmes de plagia, vous pouvez être sûr que l'aide future va être très limitée  
 
 -------------------------------------------------
 
